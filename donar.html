@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: linear-gradient(to right, #0d0633, #c4200b);
+      }
+
+      /* Float four columns side by side */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+      }
+
+      /* Remove extra left and right margins, due to padding */
+      .row {
+        margin: 0 -5px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive columns */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Style the counter cards */
+      .card {
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+        border-radius: 10%;
+        transition: transform 400ms ease-out;
+        box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+        margin: 0 10px 0 10px;
+      }
+      .card:hover {
+        transform: scale(1.1);
+      }
+
+      button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: rgb(48, 47, 47);
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 70%;
+      }
+
+      h1 {
+        font-family: Kaushan Script, sans-serif;
+        text-align: center;
+        color: hsl(0, 36%, 96%);
+        font-size: 5em;
+      }
+
+      btn {
+        text-align: center;
+      }
+      html, body {
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pool {
+  fill: url(#blood_red);
+}
+
+.drop {
+  width: 100%;
+  fill: url(#blood_red);
+  animation-name: blood_drop;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.drop_shadow {
+  opacity: 0.5;
+  fill: #7f0000;
+  animation-name: blood_drop_shadow;
+  animation-duration: 4s;
+  /*     animation-delay: 2s; */
+  animation-iteration-count: infinite;
+}
+.world{
+  border-radius: 50%;
+}
+
+@keyframes blood_drop {
+  0% {
+    transform: scale(0.1, 0.1) translate(470px, 0px);
+  }
+  25% {
+    transform: scale(1.1, 1.2);
+  }
+  95% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: translate(0, 170px);
+  }
+}
+
+@keyframes blood_drop_shadow {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  95% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h3{
+  color:blanchedalmond;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Receivers! Here are your angels :</h1>
+    <h3>People near you from Bhopal, Madhya Pradesh</h3>
+    <svg width="100px" height="250px" viewPort="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+
+        <ellipse cx="50" cy="200" rx="50" ry="25"class="pool"/>
+        
+        <ellipse cx="50" cy="200" rx="12" ry="6"class="drop_shadow"/>
+        
+      <!-- lets be real, I got the tear drop shape from http://stackoverflow.com/questions/30711203/how-do-i-create-a-teardrop-in-html and modified it -->
+         <path class="drop"
+              d="M50 0
+                 Q51.5 6.8 60 18
+                 A12.8 12.8 0 1 1 40 18
+                 Q48.5 6.8 50 3z" />
+        <defs>
+          <linearGradient id="blood_red">
+            <stop offset="10%" stop-color="#990000" />
+            <stop offset="90%" stop-color="#7f0000" />
+          </linearGradient>
+        </defs>
+       
+      </svg>
+
+    <div class="row">
+
+      <div class="column">
+        <div class="card">
+          <div class="world"><img src="Sushant.jpg" alt="Ashutosh" /></div>
+          <h2>Karan</h2>
+          <p class="title">Address: Bhopal, Madhya Pradesh</p>
+          <p class="title">Phone Number: +91 9876543210</p>
+          <div style="margin: 24px 0"></div>
+          <p><button>Contact</button></p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="world"><img src="ayan.jpg" alt="Ayan" /></div>
+          <h2>Arman</h2>
+          <p class="title">Address: Bhopal, Madhya Pradesh</p>
+          <p class="title">Phone Number: +91 9876543789</p>
+          <div style="margin: 24px 0"></div>
+          <p><button>Contact</button></p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="world"><img src="Naman.jpg" alt="Naman" /></div>
+          <h2>Nikumbh</h2>
+          <p class="title">Address: Bhopal, Madhya Pradesh</p>
+          <p class="title">Phone Number: +91 9876543211</p>
+          <div style="margin: 24px 0"></div>
+          <p><button>Contact</button></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="world"><img src="aditya.jpg" alt="Aditya" /></div>
+          <h2>Aditya</h2>
+          <p class="title">Address: Bhopal, Madhya Pradesh</p>
+          <p class="title">Phone Number: +91 9876543212</p>
+          <div style="margin: 24px 0"></div>
+          <p><button>Contact</button></p>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="arnav.jpg" alt="Ashutosh" />
+            <h2>Bodh</h2>
+            <p class="title">Address: Bhopal, Madhya Pradesh</p>
+            <p class="title">Phone Number: +91 9876543210</p>>
+            <div style="margin: 24px 0"></div>
+            <p><button>Contact</button></p>
+          </div>
+        </div>
+            <div class="column">
+              <div class="card">
+                <img src="javesh.jpg" alt="Ashutosh" />
+                <h2>Jay</h2>
+                <p class="title">Address: Bhopal, Madhya Pradesh</p>
+                <p class="title">Phone Number: +91 9876543210</p>
+  >
+                <div style="margin: 24px 0"></div>
+                <p><button>Contact</button></p>
+              </div>
+            </div>
+                <div class="column">
+                  <div class="card">
+                    <img src="harsh.jpg" alt="Ashutosh" />
+                    <h2>Harish</h2></h2>
+                    <p class="title">Address: Bhopal, Madhya Pradesh</p>
+                    <p class="title">Phone Number: +91 9876543210</p>
+      >
+                    <div style="margin: 24px 0"></div>
+                    <p><button>Contact</button></p>
+                  </div>
+                </div>
+                    <div class="column">
+                      <div class="card">
+                        <img src="hardik.jpeg" alt="Ashutosh" />
+                        <h2>Mukund</h2>
+  </h2>
+                        <p class="title">Address: Bhopal, Madhya Pradesh</p>
+                        <p class="title">Phone Number: +91 9876543210</p>
+          >
+                        <div style="margin: 24px 0"></div>
+                        <p><button>Contact</button></p>
+                      </div>
+                    </div>
+    </div>
+  </body>
+</html>

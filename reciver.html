@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: linear-gradient(to right, #0d0633, #c4200b);
+      }
+
+      /* Float four columns side by side */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+      }
+
+      /* Remove extra left and right margins, due to padding */
+      .row {
+        margin: 0 -5px;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Responsive columns */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Style the counter cards */
+      .card {
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+        border-radius: 10%;
+        transition: transform 400ms ease-out;
+        box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+        margin: 0 10px 0 10px;
+      }
+      .card:hover {
+        transform: scale(1.1);
+      }
+
+      button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: rgb(48, 47, 47);
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 70%;
+      }
+
+      h1 {
+        font-family: Kaushan Script, sans-serif;
+        text-align: center;
+        color: hsl(0, 36%, 96%);
+        font-size: 5em;
+      }
+
+      btn {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>People near you need your blood:</h1>
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="shabana.png" alt="Harsh" />
+          <h2>Shabana Khan </h2>
+          <p class="title">Need: 4 units of B+</p>
+          <p class="title">Address: Bhopal, Madhya Pradesh</p>
+          <p class="title">Phone Number: +91 9876543210</p>
+          <p>Ailment: Anemia</p>
+          <div style="margin: 24px 0"></div>
+          <p><button>Donate</button></p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="riya.png" alt="Arnav" />
+          <h2>Riya Singh</h2>
+          <p class="title">Need: 5 units of AB+</p>
+          <p class="title">Address: Bhopal, Madhya Pradesh</p>
+          <p class="title">Phone Number: +91 9876543210</p>
+          <p>Ailment:Kidney dialysis</p>
+          <div style="margin: 24px 0"></div>
+          <p><button>Donate</button></p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="jog.png" alt="Javesh" />
+          <h2>Joginder Yadav </h2>
+          <p class="title">Need: 4 units of AB+</p>
+          <p class="title">Address: Bhopal, Madhya Pradesh</p>
+          <p class="title">Phone Number: +91 9876543210</p>
+          <p>Ailment: Thalassemia</p>
+          <div style="margin: 24px 0"></div>
+          <p><button>Donate</button></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <img src="hafeez.png" alt="Hardik" />
+          <h2>Faizal Hafeez and Danish Hafeez</h2>
+          <p class="title">Need: 2 units of B+</p>
+          <p class="title">Address: Bhopal, Madhya Pradesh</p>
+          <p class="title">Phone Number: +91 9876543210</p>
+          <p>Ailment: Brothers suffer from Feniconi Anemia</p>
+          <div style="margin: 24px 0"></div>
+          <p><button>Donate</button></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
